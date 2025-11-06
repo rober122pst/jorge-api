@@ -42,9 +42,9 @@ export default function DomainStatus({ searchDomain }) {
                     {searchResult.suggestions && searchResult.suggestions.length > 0 && (
                         <div className="flex flex-col gap-3">
                             <h2 className="text-2xl font-light">Sugestões de domínios disponíveis</h2>
-                            <ul className="list-inside max-h-60 overflow-y-auto">
+                            <ul className="max-h-60 overflow-y-auto">
                                 {searchResult.suggestions.map((suggestion, index) => (
-                                    <li key={index} className="text-xl py-3 border-b border-b-transparent transition hover:border-b-green-700 cursor-pointer">{searchDomain}.<b>{suggestion}</b></li>
+                                    <li key={index} className="text-xl py-3 border-b border-b-transparent transition hover:border-b-green-700 cursor-pointer">{searchDomain.split('.')[0]}.<b>{suggestion}</b></li>
                                 ))}
                             </ul>
                         </div>
