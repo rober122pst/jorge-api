@@ -27,7 +27,7 @@ export default function DomainStatus({ searchDomain }) {
     }, [searchDomain]);
 
     return (
-        <div className={`flex flex-col gap-5 my-16 mx-auto rounded-2xl p-10 shadow-2xl w-1/2 ${!searchDomain ? 'scale-0' : 'scale-100'} transition bg-white`}>
+        <div className={`flex flex-col gap-5 my-16 mx-auto rounded-2xl p-10 shadow-2xl w-1/2 ${!searchDomain ? 'scale-y-0' : 'scale-y-100'} transition duration-300 bg-white`}>
             {loading && (
                 <div className="flex justify-center">
                     <DotPulse size={30} />
